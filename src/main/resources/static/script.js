@@ -100,6 +100,19 @@ async function authentication() {
 
 }
 
+function hideSplashScreen() {
+    let myElement = document.getElementById("splash")
+    myElement.hidden = true
+}
+
+const closeButton = document.getElementById("closeButton")
+closeButton.addEventListener("click", function () {
+    let myElement = document.getElementById("splash")
+    myElement.hidden = false
+    let email = document.getElementById("name").remove()
+    localStorage.clear()
+})
+
 
 
 
