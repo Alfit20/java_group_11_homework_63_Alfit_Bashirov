@@ -41,11 +41,11 @@
                 <div class="sign-in-htm">
                     <div class="group">
                         <label for="signInEmail" class="label">Email</label>
-                        <input name="email" id="signInEmail" type="email" class="input">
+                        <input name="email" id="signInEmail" type="email" class="input" required>
                     </div>
                     <div class="group">
                         <label for="signInPassword" class="label">Password</label>
-                        <input name="password" id="signInPassword" type="password" class="input" data-type="password">
+                        <input name="password" id="signInPassword" type="password" class="input" data-type="password" required>
                     </div>
                     <div class="group">
                         <input id="button" type="submit" class="button" value="Sign In">
@@ -56,11 +56,11 @@
                 <div class="sign-up-htm">
                     <div class="group">
                         <label for="signUpEmail" class="label">Email</label>
-                        <input id="signUpEmail" name="email" type="email" class="input">
+                        <input id="signUpEmail" name="email" type="email" class="input" required>
                     </div>
                     <div class="group">
                         <label for="signUpPassword" class="label">Password</label>
-                        <input id="signUpPassword" name="password" type="password" class="input" data-type="password">
+                        <input id="signUpPassword" name="password" type="password" class="input" data-type="password" required>
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="Sign Up">
@@ -75,14 +75,14 @@
 
 <div class="row row-cols-1 row-cols-md-1 g-2  mx-auto d-block main" style="width: 50rem;">
     <div class="col main-block">
-<!--        <div class="card">-->
+        <div class="card" id="card" hidden>
             <div class="step-info">
                 <div class="step-number">
                 </div>
             </div>
             <div class="card-body block">
             </div>
-<!--        </div>-->
+        </div>
     </div>
 </div>
 

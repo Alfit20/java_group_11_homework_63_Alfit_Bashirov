@@ -66,18 +66,12 @@ let getAuth = function () {
 
 async function authentication() {
     let userAuth = getAuth()
-    // console.log(userAuth.username + ":" + userAuth.password)
     let settings = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             "Authorization": "Basic " + btoa(userAuth.username + ":" + userAuth.password),
-            // "Access-Control-Allow-Origin": "*",
-            // "Access-Control-Allow-Methods": "*",
-            // "Access-Control-Allow-Headers": "*"
-
-        },
-        mode: "cors"
+        }
     }
     try {
         let searchedUser = await fetch(baseUrl + authUrl, settings).then(response => {
@@ -103,12 +97,16 @@ async function authentication() {
 function hideSplashScreen() {
     let myElement = document.getElementById("splash")
     myElement.hidden = true
+    const card = document.getElementById("card")
+    card.hidden = false
 }
 
 const closeButton = document.getElementById("closeButton")
 closeButton.addEventListener("click", function () {
     let myElement = document.getElementById("splash")
     myElement.hidden = false
+    const card = document.getElementById("card")
+    card.hidden = true
     let email = document.getElementById("name").remove()
     localStorage.clear()
 })
