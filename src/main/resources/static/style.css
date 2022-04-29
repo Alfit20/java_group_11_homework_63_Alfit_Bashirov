@@ -256,6 +256,9 @@ i:before {
     background-color: transparent;
     color: #fff;
 }
+.card {
+    position: inherit;
+}
 
 
 
